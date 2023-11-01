@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Set environment variables
         uses: actions/github-script@v5
         with:
@@ -19,15 +20,14 @@ jobs:
             for (const [name, value] of Object.entries(environmentVariables)) {
               set-env name value;
             }
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: "7.14.2"
+
       - name: Install dependencies
         run: pnpm install
 
       - name: Build with Next.js
         run: pnpm run build
-
-      - name: Deploy to Pages
-        uses: actions/deploy-pages@v1
