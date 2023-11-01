@@ -15,6 +15,14 @@ function Logo() {
                 height="40"
                 width="40"
                 alt='notio-logo'
+                className='dark:hidden'
+            />
+            <Image
+                src="/logo-dark.svg"
+                height="40"
+                width="40"
+                alt='notio-logo'
+                className='hidden dark:block'
             />
             <p className={cn("font-semibold", font.className)}>
                 Jotion
