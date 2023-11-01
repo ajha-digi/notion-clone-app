@@ -15,6 +15,7 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
-
+      - name: Run Convex
+        run: npx convex dev
       - name: Build with Next.js
         run: npm run build
