@@ -15,7 +15,8 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: "7.14.2"
-
+      - name: Echo secret
+        run: echo ${{ secrets.NEXT_PUBLIC_CONVEX_URL }}
       - name: Install dependencies
         run: pnpm install
 
