@@ -13,17 +13,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Set environment variables
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const environmentVariables = github.actions.getWorkflowInputs();
-
-            for (const [name, value] of Object.entries(environmentVariables)) {
-              set-env name value;
-            }
-
       - name: Install dependencies
         run: npm install
 
