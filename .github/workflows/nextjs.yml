@@ -16,7 +16,7 @@ jobs:
         with:
           version: "7.14.2"
       - name: Echo secret
-        run: echo ${{ secrets.NEXT_PUBLIC_CONVEX_URL }}
+        run: echo ${{ vars.NEXT_PUBLIC_CONVEX_URL }}
       - name: Install dependencies
         run: pnpm install
 
